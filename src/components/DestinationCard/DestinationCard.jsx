@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types'
+import { Fragment } from 'react';
 
-function DestinationCard({ title, description, distance, travel }) {
+function DestinationCard({ title, description, distance, travel, ImgSrc, ImgAlt }) {
   return (
+    <Fragment>
+    <article>
+    <img src={ImgSrc} alt={ImgAlt} />
+    </article>
     <article>
       <div>
         <h1>{title}</h1>
@@ -12,6 +17,7 @@ function DestinationCard({ title, description, distance, travel }) {
         <span>{travel}</span>
       </div>
     </article>
+    </Fragment>
   );
 }
 
