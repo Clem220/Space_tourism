@@ -1,31 +1,42 @@
-import PropTypes from 'prop-types'
-import { Fragment } from 'react';
+import { Fragment, useState } from "react";
+import destinations from "../../pages/Destination/destinations";
+import "./destinationCard.css";
 
-function DestinationCard({ title, description, distance, travel, ImgSrc, ImgAlt }) {
+function DestinationCard() {
+  let initialState = 0;
+  const [index, setIndex] = useState(initialState);
+
   return (
     <Fragment>
-    <article>
-    <img src={ImgSrc} alt={ImgAlt} />
-    </article>
-    <article>
-      <div>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </div> 
-      <div>
-        <span>{distance}</span>
-        <span>{travel}</span>
-      </div>
-    </article>
+      <article className="imgContent">
+        <img
+          src={require(`../../assets/destination/${destinations[index].images.png}`)}
+          alt=""
+        />
+      </article>
+      <article className="descriptionContent">
+        <div>
+          <span onClick={()=> setIndex(initialState + 0)}>Moon</span>
+          <span onClick={()=> setIndex(initialState + 1)}>Mars</span>
+          <span onClick={()=> setIndex(initialState + 2)}>Europa</span>
+          <span onClick={()=> setIndex(initialState + 3)}>Titan</span>
+        </div>
+        <div>
+          <h1>{destinations[index].name}</h1>
+          <p>{destinations[index].description}</p>
+        </div>
+        <div className="travelInfoContent">
+          <span className="distanceContent">
+            <span>AVG. DISTANCE</span>({destinations[index].distance})
+          </span>
+          <span className="travelContent">
+            <span>EST. TRAVEL TIME</span>
+            {destinations[index].travel}
+          </span>
+        </div>
+      </article>
     </Fragment>
   );
 }
 
-DestinationCard.propTypes = {
-    title: PropTypes.string,
-    description: PropTypes.string,
-    distance: PropTypes.string,
-    travel: PropTypes.string,
-}
-
-export default DestinationCard
+export default DestinationCard;
