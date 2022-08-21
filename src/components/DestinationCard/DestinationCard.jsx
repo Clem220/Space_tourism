@@ -8,6 +8,7 @@ function DestinationCard() {
 
   return (
     <Fragment>
+      <h1>01 PICK YOUR DESTINATION</h1>
       <article className="imgContent">
         <img
           src={require(`../../assets/destination/${destinations[index].images.png}`)}

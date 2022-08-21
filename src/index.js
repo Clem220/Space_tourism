@@ -6,7 +6,7 @@ import Banner from "./components/Banner/Banner";
 import Home from "./pages/Home/Home";
 import Destination from "./pages/Destination/Destination";
 import Crew from "./pages/Crew/Crew.jsx";
-import Technology from "./pages/Technology/Technology";
+import Technology from "./pages/Technology/Technology.jsx";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
