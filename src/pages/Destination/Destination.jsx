@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import DestinationCard from "../../components/DestinationCard/DestinationCard";
 import background from "../../assets/destination/background-destination-desktop.jpg";
-import "./test.css";
+import "./destination.css";
 
 const Content = styled.section`
   -index: 0;

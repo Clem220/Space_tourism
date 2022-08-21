@@ -1,0 +1,61 @@
+.imgContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    margin: 5vw;
+    &__title {
+        margin-bottom: 10vh;
+        &__index {
+            opacity: 0.5;
+        }
+    }
+    &__img{
+        height: vh;
+        width: 30vw;
+    }
+}
+
+.descriptionContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    margin: 5vw;
+    &__selector {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 15vw;
+        &__item{
+            color: #d0d6f9;
+            &:hover{
+                border-bottom: 1px solid #FFFF;
+                padding-bottom: 1vh;
+                opacity: 0.5;
+            }
+        }
+    }
+    &__title {
+        font-size: 50px;
+    }
+    &__description {
+        color: #d0d6f9;
+    }
+   &__travelInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-top: 1px solid #F2F2F2;
+    padding-top: 15px;
+    &__distance {
+        display: flex;
+        flex-direction: column;
+        padding-right: 2vw;
+    }
+    &__travel {
+        display: flex;
+        flex-direction: column;
+    }
+   }
+}
