@@ -1,12 +1,11 @@
 @mixin font_P {
-    font: 18px "Barlow";
+    font: 18px "Barlow Condensed";
     color: #d0d6f9;
 }
 @mixin font_h1 {
     text-transform : uppercase;
     font: 100px "Bellefair"
 }
-
 @mixin font_h3 {
     text-transform : uppercase;
     font: 56px "Bellefair";

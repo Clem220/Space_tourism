@@ -1,3 +1,5 @@
+@import "../../style/utils/mixins.scss";
+
 .textContent {
   display: flex;
   flex-direction: column;
@@ -21,6 +23,7 @@
     }
   }
   &__description {
+    @include font_P;
     line-height: 32px;
     color: #d0d6f9;
     width: 30vw;

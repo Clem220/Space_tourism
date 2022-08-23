@@ -1,4 +1,49 @@
 header {
-    z-index: 1;
-    position: absolute;
+  z-index: 1;
+  position: absolute;
+  margin-top: 5vh;
 }
+.nav {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo{
+    display: flex;
+    margin-left: 4vw ;
+  }
+  &__border {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    border-bottom: 3px solid #fff;
+    opacity: 0.5;
+    width: 32vw;
+    margin-left: 16vw;
+  }
+  &__linkContent {
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0;
+    margin: 0 0 0 507px;
+    padding: 40px;
+    -webkit-backdrop-filter: blur(81.5px);
+    backdrop-filter: blur(81.5px);
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+  &__link {
+    color: #fff;
+    &:hover{
+        opacity: 0.5;
+        border-bottom: 3px solid #fff;
+        padding-bottom: 1vh;
+    }
+    &-active{
+        color: #fff;
+        opacity: 1;
+        border-bottom: 3px solid #fff;
+        padding-bottom: 1vh;
+    }
+        }
+      }
