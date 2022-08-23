@@ -21,31 +21,55 @@ function DestinationCard() {
       </article>
       <article className="descriptionContent">
         <div className="descriptionContent__selector">
-          <span
-            className="descriptionContent__selector__item"
+          <input
+            type="radio"
+            name="selector"
+            id="moon"
+            className="descriptionContent__selector__input"
+            defaultChecked
             onClick={() => setIndex(initialState + 0)}
-          >
-            Moon
-          </span>
-          <span
-            className="descriptionContent__selector__item"
+          />
+          <label className="descriptionContent__selector__label" htmlFor="moon">
+            MOON
+          </label>
+          <input
+            type="radio"
+            name="selector"
+            id="mars"
+            className="descriptionContent__selector__input"
             onClick={() => setIndex(initialState + 1)}
-          >
-            Mars
-          </span>
-          <span
-            className="descriptionContent__selector__item"
+          />
+          <label className="descriptionContent__selector__label" htmlFor="mars">
+            MARS
+          </label>
+          <input
+            type="radio"
+            name="selector"
+            id="europa"
+            className="descriptionContent__selector__input"
             onClick={() => setIndex(initialState + 2)}
+          />
+          <label
+            className="descriptionContent__selector__label"
+            htmlFor="europa"
           >
-            Europa
-          </span>
-          <span
-            className="descriptionContent__selector__item"
+            EUROPA
+          </label>
+          <input
+            type="radio"
+            name="selector"
+            id="titan"
+            className="descriptionContent__selector__input"
             onClick={() => setIndex(initialState + 3)}
+          />
+          <label
+            className="descriptionContent__selector__label"
+            htmlFor="titan"
           >
-            Titan
-          </span>
+            TITAN
+          </label>
         </div>
+        <div className="descriptionContent-alignement">
         <h2 className="descriptionContent__title">
           {destinations[index].name}
         </h2>
@@ -54,13 +78,14 @@ function DestinationCard() {
         </p>
         <div className="descriptionContent__travelInfo">
           <span className="descriptionContent__travelInfo__distance">
-            <span>AVG. DISTANCE</span>
+            <span className="descriptionContent__travelInfo__distance-color">AVG. DISTANCE</span>
             {destinations[index].distance}
           </span>
           <span className="descriptionContent__travelInfo__travel">
-            <span>EST. TRAVEL TIME</span>
+            <span className="descriptionContent__travelInfo__travel-color">EST. TRAVEL TIME</span>
             {destinations[index].travel}
           </span>
+        </div>
         </div>
       </article>
     </Fragment>

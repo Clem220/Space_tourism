@@ -1,3 +1,5 @@
+@import "../../style/utils/mixins.scss";
+
 .imgContent{
     display: flex;
     flex-direction: column;
@@ -6,8 +8,10 @@
     margin: 5vw;
     &__title {
         margin-bottom: 10vh;
+        font: 28px "Barlow Condensed";
         &__index {
             opacity: 0.5;
+            padding-right: 1vw;
         }
     }
     &__img{
@@ -27,35 +31,59 @@
         flex-direction: row;
         justify-content: space-between;
         width: 15vw;
-        &__item{
+        &__label{
             color: #d0d6f9;
             &:hover{
                 border-bottom: 1px solid #FFFF;
                 padding-bottom: 1vh;
                 opacity: 0.5;
+                color: #FFFF;
+            }
+        }
+        &__input {
+            display: none;
+            &:checked + label {
+                border-bottom: 1px solid #FFFF;
+                padding-bottom: 1vh;
+                color: #FFFF;
             }
         }
     }
     &__title {
-        font-size: 50px;
+        margin: 2vh 0;
+        @include font_h1
     }
     &__description {
-        color: #d0d6f9;
+        padding-bottom: 5vh;
+        @include font_P
     }
    &__travelInfo {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     border-top: 1px solid #F2F2F2;
-    padding-top: 15px;
+    padding-top: 4vh;
     &__distance {
         display: flex;
         flex-direction: column;
         padding-right: 2vw;
+        @include font_h4;
+        &-color {
+            color: #d0d6f9;
+            font: 14px "Barlow";
+            padding-bottom: 0.5vh;
+        }
     }
     &__travel {
         display: flex;
         flex-direction: column;
+        @include font_h4;
+        &-color {
+            color: #d0d6f9;
+            font: 14px "Barlow";
+            padding-bottom: 0.5vh;
+        }
     }
    }
 }
+

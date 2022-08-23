@@ -1,6 +1,69 @@
-section{
-    
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  &-alignement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__title {
+    font: 28px "Barlow Condensed";
+    color: #d0d6f9;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    &__bigger {
+      font: 150px "Bellefair";
+      color: #fff;
+    }
+  }
+  &__description {
+    line-height: 32px;
+    color: #d0d6f9;
+    width: 30vw;
+    margin-top: 0;
+  }
 }
-article{
-    
+
+.linkContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  &__circleDiv {
+    &__shadow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 270px;
+      width: 270px;
+      border-radius: 25vh;
+
+      background-color: rgba(255, 255, 255, 0);
+      transition: background-color 1s, transform 1s;
+      &:hover {
+        width: 450px;
+        height: 450px;
+        border-radius: 25vh;
+        transition: background-color 0.3 ease-in-out;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+    &__center {
+      width: 274px;
+      height: 274px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border-radius: 25vh;
+      &-title {
+        font: 32px "Bellefair";
+        color: #0b0d17;
+      }
+    }
+  }
 }

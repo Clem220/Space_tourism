@@ -1,58 +1,48 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Background from "../../assets/home/background-home-desktop.jpg"
+import Background from "../../assets/home/background-home-desktop.jpg";
+import "./home.scss";
 
 const Content = styled.section`
-z-index: 0;
-    height: 100vh;
-    width: 100vw;
-    background: url(${Background});
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: #FFFF;
-`
-const ArticleContent = styled.article`
-width: 50vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-`
-
-const Circle = styled.div`
-width: 274px;
-height: 274px;
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: #fff;
-border-radius: 25vh;
-`
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url(${Background});
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+`;
 
 function Home() {
   return (
-    <Content >
-      <ArticleContent>
-        <h1>
-          So, you want to travel to <span>space</span>
+    <Content>
+      <article className="textContent">
+        <div className="textContent-alignement">
+        <h1 className="textContent__title">
+          SO, YOU WANT TO TRAVEL TO
+          <span className="textContent__title__bigger">SPACE</span>
         </h1>
-        <p>
+        <p className="textContent__description">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we’ll give you a truly out of this world
           experience!
         </p>
-      </ArticleContent>
-      <ArticleContent>
-        <Link to="/Destination">
-          <Circle>
-        <h2>Explore</h2>
-        </Circle>
+        </div>
+      </article>
+      <article className="linkContent">
+        <Link  to="/Destination">
+          <div className="linkContent__circleDiv__shadow">
+            <span className="linkContent__circleDiv__center">
+              <h2 className="linkContent__circleDiv__center-title">EXPLORE</h2>
+            </span>
+          </div>
         </Link>
-      </ArticleContent>
+      </article>
     </Content>
   );
 }
