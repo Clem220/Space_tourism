@@ -1,25 +1,11 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
-import Background from "../../assets/home/background-home-desktop.jpg";
 import "./home.scss";
 
-const Content = styled.section`
-  z-index: 0;
-  height: 100vh;
-  width: 100vw;
-  background: url(${Background});
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  color: #ffff;
-`;
+
 
 function Home() {
   return (
-    <Content>
+    <section>
       <article className="textContent">
         <div className="textContent-alignement">
         <h1 className="textContent__title">
@@ -43,7 +29,7 @@ function Home() {
           </div>
         </Link>
       </article>
-    </Content>
+    </section>
   );
 }
 

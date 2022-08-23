@@ -6,7 +6,6 @@ function CrewCard() {
   let initialState = 0;
   const [index, setIndex] = useState(initialState);
 
-  const [name, setClass] = useState(initialState);
 
   return (
     <Fragment>
@@ -24,7 +23,7 @@ function CrewCard() {
             type="radio"
             id="crewMember-1"
             name="crewMember"
-            onClick={() => {setIndex(initialState + 0); setClass(initialState)}}  
+            onClick={() => {setIndex(initialState + 0)}}  
             defaultChecked
             />
           <label
@@ -37,7 +36,7 @@ function CrewCard() {
             type="radio"
             id="crewMember-2"
             name="crewMember"
-            onClick={() => {setIndex(initialState + 1); setClass(initialState + 1)}}
+            onClick={() => {setIndex(initialState + 1)}}
             />
           <label
             className="crewContent__selector__label"
@@ -49,7 +48,7 @@ function CrewCard() {
             type="radio"
             id="crewMember-3"
             name="crewMember"
-            onClick={() => {setIndex(initialState + 2); setClass(initialState + 2)}}
+            onClick={() => {setIndex(initialState + 2)}}
             />
           <label
             className="crewContent__selector__label"
@@ -61,7 +60,7 @@ function CrewCard() {
             type="radio"
             id="crewMember-4"
             name="crewMember"
-            onClick={() => {setIndex(initialState + 3); setClass(initialState + 3)}}
+            onClick={() => {setIndex(initialState + 3)}}
             />
           <label
             className="crewContent__selector__label"
@@ -72,7 +71,7 @@ function CrewCard() {
       </article>
       <article className="crewContent__photo">
         <img
-          className={`crewContent__photo__img-${name}`}
+          className="crewContent__photo__img"
           src={require(`../../assets/crew/${crew[index].images.png}`)}
           alt="un des membres de l'équipage"
         />

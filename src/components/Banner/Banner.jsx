@@ -17,7 +17,7 @@ function Banner() {
             }
             to="/"
           >
-            00 HOME
+           <span className="nav__link__index">00</span> HOME
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -25,7 +25,7 @@ function Banner() {
             }
             to="/destination"
           >
-            01 DESTINATION
+          <span className="nav__link__index">01</span>DESTINATION
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -33,7 +33,7 @@ function Banner() {
             }
             to="/crew"
           >
-            02 CREW
+           <span className="nav__link__index">02</span>CREW
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -41,7 +41,7 @@ function Banner() {
             }
             to="/technology"
           >
-            03 TECHNOLOGY
+           <span className="nav__link__index">03</span>TECHNOLOGY
           </NavLink>
         </div>
       </nav>

@@ -1,7 +1,13 @@
+@import "../../style/utils/media.scss";
+
 header {
   z-index: 1;
   position: absolute;
   margin-top: 5vh;
+  @include tablet {
+    margin-top: 0vh;
+    position: absolute;
+  }
 }
 .nav {
   width: 100vw;
@@ -19,7 +25,10 @@ header {
     border-bottom: 3px solid #fff;
     opacity: 0.5;
     width: 32vw;
-    margin-left: 16vw;
+    margin-left: 15vw;
+    @include tablet {
+      display: none;
+    }
   }
   &__linkContent {
     width: 50vw;
@@ -31,6 +40,9 @@ header {
     -webkit-backdrop-filter: blur(81.5px);
     backdrop-filter: blur(81.5px);
     background-color: rgba(255, 255, 255, 0.04);
+    @include tablet {
+      margin: 0;
+    }
   }
   &__link {
     color: #fff;
@@ -44,6 +56,11 @@ header {
         opacity: 1;
         border-bottom: 3px solid #fff;
         padding-bottom: 1vh;
+    }
+    &__index {
+      @include tablet {
+        display: none;
+      }
     }
         }
       }

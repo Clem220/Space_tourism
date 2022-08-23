@@ -1,4 +1,23 @@
 @import "../../style/utils/mixins.scss";
+@import "../../style/utils/media.scss";
+
+section {
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url("../../assets/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  @include tablet {
+    background: url("../../assets/home/background-home-tablet.jpg");
+    flex-direction: column;
+  }
+}
 
 .textContent {
   display: flex;
@@ -6,6 +25,9 @@
   align-items: center;
   justify-content: center;
   width: 50vw;
+  @include tablet {
+    width: 60vw;
+  }
   &-alignement {
     display: flex;
     flex-direction: column;
@@ -28,6 +50,9 @@
     color: #d0d6f9;
     width: 30vw;
     margin-top: 0;
+    @include tablet {
+      width: 40vw;
+    }
   }
 }
 
@@ -43,14 +68,13 @@
       justify-content: center;
       height: 270px;
       width: 270px;
-      border-radius: 25vh;
-
+      border-radius: 135px;
       background-color: rgba(255, 255, 255, 0);
       transition: background-color 1s, transform 1s;
       &:hover {
         width: 450px;
         height: 450px;
-        border-radius: 25vh;
+        border-radius: 225px;
         transition: background-color 0.3 ease-in-out;
         background-color: rgba(255, 255, 255, 0.2);
       }
@@ -62,7 +86,7 @@
       align-items: center;
       justify-content: center;
       background-color: #fff;
-      border-radius: 25vh;
+      border-radius: 137px;
       &-title {
         font: 32px "Bellefair";
         color: #0b0d17;
